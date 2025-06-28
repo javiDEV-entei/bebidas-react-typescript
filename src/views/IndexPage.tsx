@@ -15,7 +15,7 @@ export default function indexPage() {
         <>
           <h1 className=" text-6xl font-extrabold">Recetas</h1>
           {hasDrinks?(
-            <>
+            <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 my-10 gap-10">
 
               {drinks.drinks.map((drink)=>(
                   
@@ -24,9 +24,9 @@ export default function indexPage() {
                   drink={drink}
                   />
               ))}
-            </>
+            </div>
           ):(
-            <p className=" my-10 text-center text-2xl">no hay resultados aun</p>
+            <p className=" my-10 text-center text-2xl">no hay resultados aun, utiliza el formulario para buscar recetas</p>
           )}
         </>
     )
